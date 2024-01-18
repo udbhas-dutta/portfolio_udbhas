@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../assets/logo1.png'
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from 'react-icons/fa'
+import {IconContext} from 'react-icons'
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from 'react-scroll';
@@ -41,20 +42,20 @@ const Navbar = () => {
             </div>
 
             <div className={nav === true ? 'absolute top-0 left-0 w-full flex justify-center items-center h-screen bg-[#0a192f]' : 'hidden'}>
-                <ul>
-                <li>
+                <ul className='py-16'>
+                <li className='font-bold text-3xl py-10'>
                     <Link onClick={handleClick} to="home" smooth={true} duration={500}>Home</Link>
                 </li>
-                <li>
+                <li className='font-bold text-3xl py-10'>
                     <Link onClick={handleClick} to="about" smooth={true} duration={500}>About</Link>
                 </li>
-                <li>
+                <li className='font-bold text-3xl py-10'>
                     <Link onClick={handleClick} to="skills" smooth={true} duration={500}>Skills</Link>
                 </li>
-                <li>
+                <li className='font-bold text-3xl py-10'>
                     <Link onClick={handleClick} to="work" smooth={true} duration={500}>Works</Link>
                 </li>
-                <li>
+                <li className='font-bold text-3xl py-10'>
                     <Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link>
                 </li>
                 </ul>
